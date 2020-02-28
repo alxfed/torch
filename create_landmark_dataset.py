@@ -6,7 +6,7 @@ See this file for more explanation.
 Download a trained facial shape predictor from:
     http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2
 """
-import dlib
+import dlib # something is wrong with compilation
 import glob
 import csv
 from skimage import io
