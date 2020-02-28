@@ -6,6 +6,9 @@ import torch
 
 
 def main():
+    # check the version of PyTorch
+    print(torch.__version__)
+
     x = torch.rand(5, 3)
     print(x)
 
