@@ -7,10 +7,10 @@ import torch
 
 def main():
     # check the version of PyTorch
-    print(torch.__version__)
+    print(torch.__version__) # version
 
     x = torch.rand(5, 3)
-    print(x)
+    print(x.device) # where the tensor is located
 
     print('\nCUDA is available?  ', torch.cuda.is_available())
 
