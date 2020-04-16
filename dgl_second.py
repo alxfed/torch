@@ -8,6 +8,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from dgl.nn.pytorch import GraphConv
 import itertools
+import matplotlib.pyplot as plt
 
 
 def build_karate_club_graph():

@@ -7,6 +7,8 @@ import networkx as nx
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+import matplotlib.pyplot as plt
+
 
 def build_karate_club_graph():
     # All 78 edges are stored in two numpy arrays. One for source endpoints
@@ -32,10 +34,11 @@ if __name__ == '__main__':
     G = build_karate_club_graph()
     # Since the actual graph is undirected, we convert it for visualization
     # purpose.
-    # nx_G = G.to_networkx().to_undirected()
-    # # Kamada-Kawaii layout usually looks pretty for arbitrary graphs
-    # pos = nx.kamada_kawai_layout(nx_G)
-    # nx.draw(nx_G, pos, with_labels=True, node_color=[[.7, .7, .7]])
+    nx_G = G.to_networkx().to_undirected()
+    # Kamada-Kawaii layout usually looks pretty for arbitrary graphs
+    pos = nx.kamada_kawai_layout(nx_G)
+    nx.draw(nx_G, pos, with_labels=True, node_color=[[.7, .7, .7]])
+    plt.show()
 
     embed = nn.Embedding(34, 5)  # 34 nodes with embedding dim equal to 5
     G.ndata['feat'] = embed.weight
