@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""...
+"""TinkerTop and Gremlin in a container
 """
 from gremlin_python import statics
 from gremlin_python.process.anonymous_traversal import traversal
